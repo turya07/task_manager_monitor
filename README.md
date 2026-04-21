@@ -66,8 +66,8 @@ Or if copied by `setup.sh`:
 ## Notes / current limitations
 
 - The app loads font from:
-  - `/home/tb07/.local/share/fonts/Poppins-Regular.ttf`
-  - Update this path in `main.cpp` if this font does not exist on your machine.
+  - `~/.local/share/fonts/Poppins-Regular.ttf` (resolved at runtime via `$HOME`)
+  - Place `Poppins-Regular.ttf` at that path, or update the font path in `main.cpp` to point to a font that exists on your machine.
 - CPU temperature is read from:
   - `/sys/class/hwmon/hwmon4/temp1_input`
   - This path can vary by system; adjust in `main.cpp` if needed.

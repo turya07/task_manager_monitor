@@ -279,7 +279,8 @@ int main(const int argc, const char *argv[])
     float lastRamUsage = 0.f;
 
     sf::Font font;
-    font.loadFromFile("/home/tb07/.local/share/fonts/Poppins-Regular.ttf");
+    const char *homeDir = getenv("HOME");
+    font.loadFromFile(std::string(homeDir ? homeDir : "") + "/.local/share/fonts/Poppins-Regular.ttf");
 
     sf::Clock sampleClock;
 
